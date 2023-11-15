@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Produkt> wszystkieProdukty = new ArrayList<>();
     private ListView listView;
     private EditText editText;
+    private EditText editTextCena;
     private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         wszystkieProdukty.add(new Produkt("maszyna Turinga",130));
         listView = findViewById(R.id.listView2);
         editText = findViewById(R.id.editText);
+        editTextCena = findViewById(R.id.editTextNumberDecimal);
         button = findViewById(R.id.button);
         ArrayAdapter<Produkt> adapter = new ArrayAdapter<>(
                 this,
@@ -50,7 +52,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         String p = editText.getText().toString();
-                        wszystkieProdukty.add(new Produkt(p,40));
+                        int cena = Integer.valueOf(editTextCena.getText().toString());
+                        wszystkieProdukty.add(new Produkt(p,cena));
                         adapter.notifyDataSetChanged();
                     }
                 }
