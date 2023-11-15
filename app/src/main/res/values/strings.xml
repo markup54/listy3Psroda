@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Listy3Psroda</string>
+    <string-array name="produkty">
+        <item>mleko</item>
+        <item>woda</item>
+        <item>chleb</item>
+        <item>jabłko</item>
+        <item>banan</item>
+    </string-array>
+</resources>
